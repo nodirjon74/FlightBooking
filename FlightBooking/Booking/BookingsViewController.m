@@ -36,14 +36,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     [self setFlightArr:[self doSomethingWithTheJson]];
-    NSLog(@"CHECK %lu", (unsigned long)self.flightArr.count);
     
     return self.flightArr.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     [self setFlightArr:[self doSomethingWithTheJson]];
-//    NSLog(@"CHECK2 %lu", (unsigned long)self.flightArr.count);
     OneWayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"oneWay"];
     NSDictionary *data = self.flightArr[indexPath.row];
     NSLog(@"Data %@", data);
@@ -63,18 +61,6 @@
     NSLog(@"JSON %@", flight);
 
     return flight;
-//    for (NSDictionary *colour in colours) {
-//        NSString *name = [colour objectForKey:@"name"];
-//        NSLog(@"Colour name: %@", name);
-
-//        if ([name isEqualToString:@"green"]) {
-//            NSArray *pictures = [colour objectForKey:@"pictures"];
-//            for (NSDictionary *picture in pictures) {
-//                NSString *pictureName = [picture objectForKey:@"name"];
-//                NSLog(@"Picture name: %@", pictureName);
-//            }
-//        }
-//    }
 }
 
 - (NSDictionary *)JSONFromFile

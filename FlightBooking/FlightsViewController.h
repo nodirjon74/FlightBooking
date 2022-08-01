@@ -9,7 +9,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface FlightsViewController : UIViewController
+@interface FlightsViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+-(NSArray *) doSomethingWithTheJson;
+
+@property (weak, nonatomic) NSArray *flightArr;
 
 @end
 
