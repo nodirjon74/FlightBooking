@@ -116,6 +116,9 @@
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I43-Ps-cgw">
                                         <rect key="frame" x="145.5" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="changeSwitch:" destination="kPU-ZB-MiL" eventType="valueChanged" id="UPg-pf-9TH"/>
+                                        </connections>
                                     </switch>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round Trip" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fp6-CG-mDY">
                                         <rect key="frame" x="271.5" y="0.0" width="82.5" height="31"/>
@@ -133,6 +136,14 @@
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="y8M-TD-YUC" id="yYL-Hf-KbW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="roundTrip" rowHeight="74" id="pI0-QC-R2x" customClass="RoundTripCell">
+                                        <rect key="frame" x="0.0" y="98.5" width="414" height="74"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pI0-QC-R2x" id="kyP-yh-7Yt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -159,7 +170,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fromCalendar" destination="2gu-Oj-Ldj" id="JXI-yu-RNn"/>
                         <outlet property="tableView" destination="q5D-Zn-fC7" id="X74-qJ-eNC"/>
+                        <outlet property="toCalendar" destination="wel-0b-Y1T" id="0SG-TC-a9u"/>
+                        <outlet property="tripSwitch" destination="I43-Ps-cgw" id="Rzn-HY-dDa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Mw-TG-gM8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

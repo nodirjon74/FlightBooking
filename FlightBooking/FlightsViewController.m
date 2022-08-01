@@ -30,19 +30,53 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     [self setFlightArr:[self doSomethingWithTheJson]];
     
-    return self.flightArr.count;
+    self.filtered = [self.flightArr filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF contains[c] 'RoundTrip'"]];
+    if (!self.tripSwitch.isOn) {
+        NSLog(@"FM %lu", (unsigned long)self.flightArr.count);
+        return self.flightArr.count;
+        
+    } else {
+        NSLog(@"FL %lu", (unsigned long)self.filtered.count);
+        return self.filtered.count;
+        
+    }
+
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     [self setFlightArr:[self doSomethingWithTheJson]];
-    OneWayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"oneWay"];
+    
+    
     NSDictionary *data = self.flightArr[indexPath.row];
-    NSLog(@"Data %@", data);
-    cell.departureCity.text = [data objectForKey:@"origin"];
-    cell.departureTime.text = [data objectForKey:@"departureTime"];
-    cell.arrivingCity.text = [data objectForKey:@"destination"];
-    cell.arrivingTime.text = [data objectForKey:@"arrivalTime"];
-    return cell;
+    
+    if (!self.tripSwitch.isOn) {
+        
+        OneWayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"oneWay"];
+        cell.departureCity.text = [data objectForKey:@"origin"];
+        cell.departureTime.text = [data objectForKey:@"departureTime"];
+        cell.arrivingCity.text = [data objectForKey:@"destination"];
+        cell.arrivingTime.text = [data objectForKey:@"arrivalTime"];
+        
+        return cell;
+    } else {
+        
+        self.filtered = [self.flightArr filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF contains[c] 'RoundTrip'"]];
+        NSDictionary *data = self.filtered[indexPath.row];
+        
+        RoundTripCell *cell = [tableView dequeueReusableCellWithIdentifier:@"roundTrip"];
+        cell.departureCityIn.text = [data objectForKey:@"origin"];
+        cell.departureTimeIn.text = [data objectForKey:@"departureTime"];
+        cell.arrivingCityIn.text = [data objectForKey:@"destination"];
+        cell.arrivingTimeIn.text = [data objectForKey:@"arrivalTime"];
+        
+        cell.departureCityOut.text = [data objectForKey:@"originBack"];
+        cell.departureTimeOut.text = [data objectForKey:@"departureTime"];
+        cell.arrivingCityOut.text = [data objectForKey:@"destinationBack"];
+        cell.arrivingTimeOut.text = [data objectForKey:@"arrivalTime"];
+        
+        return cell;
+    }
+    
 }
 
 
@@ -51,7 +85,7 @@
     
 
     NSArray *flight = [dict objectForKey:@"flights"];
-    NSLog(@"JSON %@", flight);
+//    NSLog(@"JSON %@", flight);
 
     return flight;
 }
@@ -73,4 +107,14 @@
 }
 */
 
+- (IBAction)changeSwitch:(id)sender {
+    UISwitch *mySwitch = (UISwitch *)sender;
+    if ([mySwitch isOn]) {
+        [self.tableView reloadData];
+        NSLog(@"its on!");
+    } else {
+        [self.tableView reloadData];
+        NSLog(@"its off!");
+    }
+}
 @end
