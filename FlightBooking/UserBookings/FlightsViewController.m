@@ -85,7 +85,6 @@
     
 
     NSArray *flight = [dict objectForKey:@"flights"];
-//    NSLog(@"JSON %@", flight);
 
     return flight;
 }
@@ -110,11 +109,10 @@
 - (IBAction)changeSwitch:(id)sender {
     UISwitch *mySwitch = (UISwitch *)sender;
     if ([mySwitch isOn]) {
-        [self.tableView reloadData];
         NSLog(@"its on!");
     } else {
-        [self.tableView reloadData];
         NSLog(@"its off!");
     }
+    [self.tableView reloadData];
 }
 @end

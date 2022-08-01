@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kPU-ZB-MiL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ts6-4Q-hKJ">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -8,6 +8,24 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="U0Z-DG-vbt">
+            <objects>
+                <tabBarController id="ts6-4Q-hKJ" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rjm-2W-9nC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="dLa-gw-tVB"/>
+                        <segue destination="kPU-ZB-MiL" kind="relationship" relationship="viewControllers" id="95l-Gx-3pe"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFI-2e-uFG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1200" y="453"/>
+        </scene>
         <!--Bookings View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -17,7 +35,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cRa-3s-xQU">
-                                <rect key="frame" x="0.0" y="88" width="414" height="720"/>
+                                <rect key="frame" x="0.0" y="83" width="414" height="730"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="oneWay" rowHeight="160" id="zgi-gG-6bK" customClass="OneWayCell">
@@ -39,36 +57,28 @@
                                 </prototypes>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UiE-S0-oa7">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="39"/>
                                 <items>
-                                    <navigationItem title="Title" id="8g3-N2-BM4"/>
+                                    <navigationItem title="User Bookings" id="8g3-N2-BM4"/>
                                 </items>
                             </navigationBar>
-                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LtA-DQ-AG7">
-                                <rect key="frame" x="0.0" y="808" width="414" height="49"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <tabBarItem title="" systemItem="search" id="YsV-op-7hp"/>
-                                    <tabBarItem systemItem="topRated" id="fOZ-gB-ikf"/>
-                                </items>
-                            </tabBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cRa-3s-xQU" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7th-oI-E0h"/>
-                            <constraint firstItem="LtA-DQ-AG7" firstAttribute="top" secondItem="cRa-3s-xQU" secondAttribute="bottom" id="Hwp-j5-lZw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cRa-3s-xQU" secondAttribute="bottom" id="Iee-We-dzc"/>
                             <constraint firstItem="cRa-3s-xQU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L6T-b4-Xkb"/>
                             <constraint firstItem="UiE-S0-oa7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PGm-PR-TxX"/>
                             <constraint firstItem="UiE-S0-oa7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="SmY-gp-sta"/>
                             <constraint firstItem="cRa-3s-xQU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YAj-b8-xdQ"/>
-                            <constraint firstItem="LtA-DQ-AG7" firstAttribute="leading" secondItem="cRa-3s-xQU" secondAttribute="leading" id="dDh-P2-ITI"/>
                             <constraint firstItem="cRa-3s-xQU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="k3h-yk-Nel"/>
-                            <constraint firstItem="LtA-DQ-AG7" firstAttribute="trailing" secondItem="cRa-3s-xQU" secondAttribute="trailing" id="lf4-Xp-Mom"/>
                             <constraint firstItem="UiE-S0-oa7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="m5u-gR-BRC"/>
                             <constraint firstItem="cRa-3s-xQU" firstAttribute="top" secondItem="UiE-S0-oa7" secondAttribute="bottom" id="tpG-2X-JnE"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="8Bk-5e-4oA"/>
+                    <navigationItem key="navigationItem" id="lt5-lh-M6S"/>
                     <connections>
                         <outlet property="bookingsTableView" destination="cRa-3s-xQU" id="dBg-xP-C1q"/>
                     </connections>
@@ -86,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-dr-zJc">
-                                <rect key="frame" x="10" y="144" width="394" height="70"/>
+                                <rect key="frame" x="10" y="108" width="394" height="70"/>
                                 <subviews>
                                     <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="2gu-Oj-Ldj">
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="70"/>
@@ -106,7 +116,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y87-MT-OOJ">
-                                <rect key="frame" x="30" y="259" width="354" height="31"/>
+                                <rect key="frame" x="30" y="223" width="354" height="31"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Way" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OSJ-6B-r02">
                                         <rect key="frame" x="0.0" y="0.0" width="68.5" height="31"/>
@@ -129,7 +139,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="q5D-Zn-fC7">
-                                <rect key="frame" x="0.0" y="310" width="414" height="502"/>
+                                <rect key="frame" x="0.0" y="274" width="414" height="539"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="oneWay" rowHeight="74" id="y8M-TD-YUC" customClass="OneWayCell">
@@ -150,6 +160,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zs8-ZJ-gGB">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Booking" id="Cwm-sd-WFJ"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ny7-Mn-sg9"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -159,16 +175,21 @@
                             <constraint firstItem="y87-MT-OOJ" firstAttribute="top" secondItem="A3M-dr-zJc" secondAttribute="bottom" constant="45" id="5Ix-XI-Uzx"/>
                             <constraint firstItem="A3M-dr-zJc" firstAttribute="leading" secondItem="ny7-Mn-sg9" secondAttribute="leading" constant="10" id="8pT-3p-4GO"/>
                             <constraint firstAttribute="trailing" secondItem="A3M-dr-zJc" secondAttribute="trailing" constant="10" id="A0j-hX-iwH"/>
-                            <constraint firstItem="ny7-Mn-sg9" firstAttribute="bottom" secondItem="q5D-Zn-fC7" secondAttribute="bottom" constant="50" id="A48-1J-XYb"/>
+                            <constraint firstItem="ny7-Mn-sg9" firstAttribute="bottom" secondItem="q5D-Zn-fC7" secondAttribute="bottom" id="A48-1J-XYb"/>
                             <constraint firstItem="q5D-Zn-fC7" firstAttribute="centerX" secondItem="d3I-Aa-Ao1" secondAttribute="centerX" id="ALB-ag-CEA"/>
                             <constraint firstItem="A3M-dr-zJc" firstAttribute="centerX" secondItem="d3I-Aa-Ao1" secondAttribute="centerX" id="Big-Oa-j2Q"/>
                             <constraint firstItem="y87-MT-OOJ" firstAttribute="centerX" secondItem="d3I-Aa-Ao1" secondAttribute="centerX" id="JFv-1x-ERU"/>
                             <constraint firstItem="q5D-Zn-fC7" firstAttribute="trailing" secondItem="ny7-Mn-sg9" secondAttribute="trailing" id="Qgj-5e-abC"/>
                             <constraint firstItem="ny7-Mn-sg9" firstAttribute="trailing" secondItem="y87-MT-OOJ" secondAttribute="trailing" constant="30" id="Qv9-dI-WOr"/>
-                            <constraint firstItem="A3M-dr-zJc" firstAttribute="top" secondItem="ny7-Mn-sg9" secondAttribute="top" constant="100" id="S2p-d6-05a"/>
+                            <constraint firstItem="A3M-dr-zJc" firstAttribute="top" secondItem="Zs8-ZJ-gGB" secondAttribute="bottom" constant="20" id="S2p-d6-05a"/>
+                            <constraint firstItem="Zs8-ZJ-gGB" firstAttribute="leading" secondItem="ny7-Mn-sg9" secondAttribute="leading" id="Ud2-ZW-CaM"/>
                             <constraint firstItem="q5D-Zn-fC7" firstAttribute="top" secondItem="y87-MT-OOJ" secondAttribute="bottom" constant="20" id="hwE-gK-pKo"/>
+                            <constraint firstItem="Zs8-ZJ-gGB" firstAttribute="top" secondItem="ny7-Mn-sg9" secondAttribute="top" id="sW2-Ge-tYU"/>
+                            <constraint firstItem="Zs8-ZJ-gGB" firstAttribute="trailing" secondItem="ny7-Mn-sg9" secondAttribute="trailing" id="tRN-2A-Ns4"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="lJI-9t-E7n"/>
+                    <navigationItem key="navigationItem" id="Mvp-nL-cQ3"/>
                     <connections>
                         <outlet property="fromCalendar" destination="2gu-Oj-Ldj" id="JXI-yu-RNn"/>
                         <outlet property="tableView" destination="q5D-Zn-fC7" id="X74-qJ-eNC"/>
@@ -178,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Mw-TG-gM8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="902.89855072463774" y="118.52678571428571"/>
+            <point key="canvasLocation" x="122" y="822"/>
         </scene>
     </scenes>
     <resources>

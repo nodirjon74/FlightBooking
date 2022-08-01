@@ -75,10 +75,8 @@
 
 - (NSArray *)doSomethingWithTheJson {
     NSDictionary *dict = [self JSONFromFile];
-    
 
     NSArray *flight = [dict objectForKey:@"flights"];
-    NSLog(@"JSON %@", flight);
 
     return flight;
 }

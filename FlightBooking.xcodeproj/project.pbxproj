@@ -78,14 +78,13 @@
 			children = (
 				2CE34AF128912BBA007BEAB9 /* Delegate */,
 				2CE34AF028912BB0007BEAB9 /* Booking */,
+				2CE34B1B289859D5007BEAB9 /* UserBookings */,
 				2CE34ADF28911CC0007BEAB9 /* Main.storyboard */,
 				2CE34AE228911CC3007BEAB9 /* Assets.xcassets */,
 				2CE34AE428911CC3007BEAB9 /* LaunchScreen.storyboard */,
 				2CE34AE728911CC3007BEAB9 /* Info.plist */,
 				2CE34B1928983A14007BEAB9 /* flights.json */,
 				2CE34AE828911CC3007BEAB9 /* main.m */,
-				2CE34B0D2893FDD2007BEAB9 /* FlightsViewController.h */,
-				2CE34B0E2893FDD2007BEAB9 /* FlightsViewController.m */,
 			);
 			path = FlightBooking;
 			sourceTree = "<group>";
@@ -138,6 +137,15 @@
 				2CE34B0328928956007BEAB9 /* OneWayCell.xib */,
 			);
 			path = OneWayCell;
+			sourceTree = "<group>";
+		};
+		2CE34B1B289859D5007BEAB9 /* UserBookings */ = {
+			isa = PBXGroup;
+			children = (
+				2CE34B0D2893FDD2007BEAB9 /* FlightsViewController.h */,
+				2CE34B0E2893FDD2007BEAB9 /* FlightsViewController.m */,
+			);
+			path = UserBookings;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
