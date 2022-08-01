@@ -42,14 +42,34 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     [self setFlightArr:[self doSomethingWithTheJson]];
-    OneWayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"oneWay"];
+    
     NSDictionary *data = self.flightArr[indexPath.row];
-    NSLog(@"Data %@", data);
-    cell.departureCity.text = [data objectForKey:@"origin"];
-    cell.departureTime.text = [data objectForKey:@"departureTime"];
-    cell.arrivingCity.text = [data objectForKey:@"destination"];
-    cell.arrivingTime.text = [data objectForKey:@"arrivalTime"];
-    return cell;
+    NSString *flight = [data objectForKey:@"flight"];
+    
+    if ([flight  isEqual: @"oneWay"]) {
+        OneWayCell *cell = [tableView dequeueReusableCellWithIdentifier:@"oneWay"];
+        cell.departureCity.text = [data objectForKey:@"origin"];
+        cell.departureTime.text = [data objectForKey:@"departureTime"];
+        cell.arrivingCity.text = [data objectForKey:@"destination"];
+        cell.arrivingTime.text = [data objectForKey:@"arrivalTime"];
+        
+        return cell;
+    } else {
+        RoundTripCell *cell = [tableView dequeueReusableCellWithIdentifier:@"roundTrip"];
+        cell.departureCityIn.text = [data objectForKey:@"origin"];
+        cell.departureTimeIn.text = [data objectForKey:@"departureTime"];
+        cell.arrivingCityIn.text = [data objectForKey:@"destination"];
+        cell.arrivingTimeIn.text = [data objectForKey:@"arrivalTime"];
+        
+        cell.departureCityOut.text = [data objectForKey:@"originBack"];
+        cell.departureTimeOut.text = [data objectForKey:@"departureTime"];
+        cell.arrivingCityOut.text = [data objectForKey:@"destinationBack"];
+        cell.arrivingTimeOut.text = [data objectForKey:@"arrivalTime"];
+        
+        return cell;
+    }
+    
+    
 }
 
 
