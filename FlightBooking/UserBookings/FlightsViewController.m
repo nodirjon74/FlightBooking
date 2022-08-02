@@ -57,7 +57,7 @@
         cell.arrivingCity.text = [data objectForKey:@"destination"];
         cell.arrivingTime.text = [data objectForKey:@"arrivalTime"];
         cell.flightClass.text = [data objectForKey:@"class"];
-        cell.passCount.text = [NSString stringWithFormat:@"%@ %@", @"Passengers", [NSString stringWithFormat:@"%@", [data objectForKey:@"passenger"]]];
+        cell.passCount.text = [NSString stringWithFormat:@"%@ %@", @"Passengers:", [NSString stringWithFormat:@"%@", [data objectForKey:@"passenger"]]];
         
         return cell;
     } else {
@@ -71,14 +71,14 @@
         cell.arrivingCityIn.text = [data objectForKey:@"destination"];
         cell.arrivingTimeIn.text = [data objectForKey:@"arrivalTime"];
         cell.flightClassOut.text = [data objectForKey:@"class"];
-        cell.passCountOut.text = [NSString stringWithFormat:@"%@ %@", @"Passengers", [NSString stringWithFormat:@"%@", [data objectForKey:@"passenger"]]];
+        cell.passCountOut.text = [NSString stringWithFormat:@"%@ %@", @"Passengers:", [NSString stringWithFormat:@"%@", [data objectForKey:@"passenger"]]];
         
         cell.departureCityOut.text = [data objectForKey:@"originBack"];
         cell.departureTimeOut.text = [data objectForKey:@"departureTime"];
         cell.arrivingCityOut.text = [data objectForKey:@"destinationBack"];
         cell.arrivingTimeOut.text = [data objectForKey:@"arrivalTime"];
         cell.flightClassIn.text = [data objectForKey:@"class"];
-        cell.passCountIn.text = [NSString stringWithFormat:@"%@ %@", @"Passengers", [NSString stringWithFormat:@"%@", [data objectForKey:@"passenger"]]];
+        cell.passCountIn.text = [NSString stringWithFormat:@"%@ %@", @"Passengers:", [NSString stringWithFormat:@"%@", [data objectForKey:@"passenger"]]];
         
         return cell;
     }
