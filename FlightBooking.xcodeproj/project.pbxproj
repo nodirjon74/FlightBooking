@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2CB0854F2899B7FA0026A334 /* flights.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CB0854E2899B7FA0026A334 /* flights.json */; };
 		2CE34AD828911CC0007BEAB9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE34AD728911CC0007BEAB9 /* AppDelegate.m */; };
 		2CE34ADB28911CC0007BEAB9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE34ADA28911CC0007BEAB9 /* SceneDelegate.m */; };
 		2CE34ADE28911CC0007BEAB9 /* BookingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE34ADD28911CC0007BEAB9 /* BookingsViewController.m */; };
@@ -19,10 +20,10 @@
 		2CE34B0928929437007BEAB9 /* RoundTripCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE34B0728929437007BEAB9 /* RoundTripCell.m */; };
 		2CE34B0A28929437007BEAB9 /* RoundTripCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CE34B0828929437007BEAB9 /* RoundTripCell.xib */; };
 		2CE34B0F2893FDD2007BEAB9 /* FlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE34B0E2893FDD2007BEAB9 /* FlightsViewController.m */; };
-		2CE34B1A28983A14007BEAB9 /* flights.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CE34B1928983A14007BEAB9 /* flights.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2CB0854E2899B7FA0026A334 /* flights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = flights.json; sourceTree = "<group>"; };
 		2CE34AD328911CC0007BEAB9 /* FlightBooking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightBooking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2CE34AD628911CC0007BEAB9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2CE34AD728911CC0007BEAB9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,7 +44,6 @@
 		2CE34B0828929437007BEAB9 /* RoundTripCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundTripCell.xib; sourceTree = "<group>"; };
 		2CE34B0D2893FDD2007BEAB9 /* FlightsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlightsViewController.h; sourceTree = "<group>"; };
 		2CE34B0E2893FDD2007BEAB9 /* FlightsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlightsViewController.m; sourceTree = "<group>"; };
-		2CE34B1928983A14007BEAB9 /* flights.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = flights.json; path = ../../flights.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,8 +83,8 @@
 				2CE34AE228911CC3007BEAB9 /* Assets.xcassets */,
 				2CE34AE428911CC3007BEAB9 /* LaunchScreen.storyboard */,
 				2CE34AE728911CC3007BEAB9 /* Info.plist */,
-				2CE34B1928983A14007BEAB9 /* flights.json */,
 				2CE34AE828911CC3007BEAB9 /* main.m */,
+				2CB0854E2899B7FA0026A334 /* flights.json */,
 			);
 			path = FlightBooking;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 				2CE34B0A28929437007BEAB9 /* RoundTripCell.xib in Resources */,
 				2CE34AE328911CC3007BEAB9 /* Assets.xcassets in Resources */,
 				2CE34AE128911CC0007BEAB9 /* Main.storyboard in Resources */,
-				2CE34B1A28983A14007BEAB9 /* flights.json in Resources */,
+				2CB0854F2899B7FA0026A334 /* flights.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

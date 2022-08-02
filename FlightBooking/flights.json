@@ -1,0 +1,146 @@
+{
+    "flights": [
+        
+        {
+          "duration": 590,
+          "departureTime": "2016-10-10",
+          "arrivalTime": "2016-10-11",
+          "origin": "GRU",
+          "destination": "JFK",
+          "flight": "oneWay",
+          "passenger": 210,
+          "class": "Economy"
+        },
+        {
+          "duration": 635,
+          "departureTime": "2016-10-16",
+          "arrivalTime": "2016-10-17",
+          "origin": "GRU",
+          "destination": "YYZ",
+          "connectionDuration": 125,
+          "flight": "oneWay",
+          "passenger": 10,
+          "class": "First Class"
+          
+        },
+        {
+          "duration": 102,
+          "departureTime": "2016-10-17",
+          "arrivalTime": "2016-10-17",
+          "origin": "YYZ",
+          "destination": "JFK",
+          "flight": "oneWay",
+          "passenger": 60,
+          "class": "First Class"
+        },
+        {
+          "duration": 515,
+          "departureTime": "2016-10-10",
+          "arrivalTime": "2016-10-11",
+          "origin": "GRU",
+          "destination": "MIA",
+          "connectionDuration": 145,
+          "flight": "oneWay",
+          "passenger": 210,
+          "class": "Economy"
+        },
+        {
+          "duration": 192,
+          "departureTime": "2016-10-11",
+          "arrivalTime": "2016-10-11",
+          "origin": "MIA",
+          "destination": "YYZ",
+          "connectionDuration": 98,
+          "flight": "oneWay",
+          "passenger": 210,
+          "class": "Economy"
+        },
+        {
+          "duration": 100,
+          "departureTime": "2016-10-11",
+          "arrivalTime": "2016-10-11",
+          "origin": "YYZ",
+          "destination": "JFK",
+          "flight": "oneWay",
+          "passenger": 210,
+          "class": "Economy"
+        },
+        
+        {
+          "duration": 590,
+          "departureTime": "2016-10-10",
+          "arrivalTime": "2016-10-11",
+          "origin": "GRU",
+          "destination": "JFK",
+          "originBack": "JFK",
+          "destinationBack": "GRU",
+          "flight": "RoundTrip",
+          "passenger": 210,
+          "class": "Economy"
+        },
+        {
+          "duration": 635,
+          "departureTime": "2016-10-16",
+          "arrivalTime": "2016-10-17",
+          "origin": "GRU",
+          "destination": "YYZ",
+          "originBack": "YYZ",
+          "destinationBack": "GRU",
+          "connectionDuration": 125,
+          "flight": "RoundTrip",
+          "passenger": 110,
+          "class": "Business Class"
+          
+        },
+        {
+          "duration": 102,
+          "departureTime": "2016-10-17",
+          "arrivalTime": "2016-10-17",
+          "origin": "YYZ",
+          "destination": "JFK",
+          "originBack": "JFK",
+          "destinationBack": "YYZ",
+          "flight": "RoundTrip",
+          "passenger": 120,
+          "class": "Economy"
+        },
+        {
+          "duration": 515,
+          "departureTime": "2016-10-10",
+          "arrivalTime": "2016-10-11",
+          "origin": "GRU",
+          "destination": "MIA",
+          "originBack": "MIA",
+          "destinationBack": "GRU",
+          "connectionDuration": 145,
+          "flight": "RoundTrip",
+          "passenger": 75,
+          "class": "First Class"
+        },
+        {
+          "duration": 192,
+          "departureTime": "2016-10-11",
+          "arrivalTime": "2016-10-11",
+          "origin": "MIA",
+          "destination": "YYZ",
+          "originBack": "YYZ",
+          "destinationBack": "MIA",
+          "connectionDuration": 98,
+          "flight": "RoundTrip",
+          "passenger": 210,
+          "class": "Business Class"
+        },
+        {
+          "duration": 100,
+          "departureTime": "2016-10-11",
+          "arrivalTime": "2016-10-11",
+          "origin": "YYZ",
+          "destination": "JFK",
+          "flight": "oneWay",
+          "passenger": 210,
+          "class": "Business Class"
+        }
+        
+    ]
+
+}

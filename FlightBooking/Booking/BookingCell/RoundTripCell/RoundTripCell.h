@@ -15,14 +15,16 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *departureTimeOut;
 @property (weak, nonatomic) IBOutlet UILabel *arrivingCityOut;
 @property (weak, nonatomic) IBOutlet UILabel *arrivingTimeOut;
-@property (weak, nonatomic) IBOutlet UILabel *flightTimeOut;
+@property (weak, nonatomic) IBOutlet UILabel *flightClassOut;
+@property (weak, nonatomic) IBOutlet UILabel *passCountOut;
+
 
 @property (weak, nonatomic) IBOutlet UILabel *departureCityIn;
 @property (weak, nonatomic) IBOutlet UILabel *departureTimeIn;
 @property (weak, nonatomic) IBOutlet UILabel *arrivingCityIn;
 @property (weak, nonatomic) IBOutlet UILabel *arrivingTimeIn;
-@property (weak, nonatomic) IBOutlet UILabel *flightTimeIn;
-
+@property (weak, nonatomic) IBOutlet UILabel *flightClassIn;
+@property (weak, nonatomic) IBOutlet UILabel *passCountIn;
 
 @end
 

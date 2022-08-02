@@ -15,7 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (weak, nonatomic) IBOutlet UILabel *departureTime;
 @property (weak, nonatomic) IBOutlet UILabel *arrivingCity;
 @property (weak, nonatomic) IBOutlet UILabel *arrivingTime;
-@property (weak, nonatomic) IBOutlet UILabel *flightTime;
+@property (weak, nonatomic) IBOutlet UILabel *flightClass;
+@property (weak, nonatomic) IBOutlet UILabel *passCount;
 
 @end
 

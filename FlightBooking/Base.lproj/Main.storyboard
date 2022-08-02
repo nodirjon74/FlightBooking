@@ -95,20 +95,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-dr-zJc">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="A3M-dr-zJc">
                                 <rect key="frame" x="10" y="108" width="394" height="70"/>
                                 <subviews>
-                                    <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="2gu-Oj-Ldj">
-                                        <rect key="frame" x="0.0" y="0.0" width="120" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="lQ8-kg-6OO"/>
-                                        </constraints>
+                                    <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="2gu-Oj-Ldj">
+                                        <rect key="frame" x="0.0" y="0.0" width="189.5" height="70"/>
                                     </datePicker>
-                                    <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="wel-0b-Y1T">
-                                        <rect key="frame" x="274" y="0.0" width="120" height="70"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="120" id="hpC-0q-2oq"/>
-                                        </constraints>
+                                    <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="wel-0b-Y1T">
+                                        <rect key="frame" x="204.5" y="0.0" width="189.5" height="70"/>
                                     </datePicker>
                                 </subviews>
                                 <constraints>

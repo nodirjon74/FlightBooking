@@ -8,38 +8,41 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="oneWay" rowHeight="165" id="ABZ-7k-50f" customClass="OneWayCell">
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="oneWay" rowHeight="114" id="ABZ-7k-50f" customClass="OneWayCell">
             <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ABZ-7k-50f" id="9VX-iC-2Kf">
                 <rect key="frame" x="0.0" y="0.0" width="414" height="165"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="fCR-iJ-6jg">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fCR-iJ-6jg">
                         <rect key="frame" x="7" y="15" width="400" height="135"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="roN-Ws-MJI">
-                                <rect key="frame" x="15" y="0.0" width="370" height="24"/>
+                                <rect key="frame" x="15" y="0.0" width="370" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Departure" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RGo-72-aF0">
-                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="120.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.64629106329999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arriving" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="su8-N5-FQt">
-                                        <rect key="frame" x="220.5" y="0.0" width="149.5" height="24"/>
+                                        <rect key="frame" x="220.5" y="0.0" width="149.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.64629106329999997" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KjB-2d-Tj4"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="SPx-tY-pQk">
-                                <rect key="frame" x="15" y="46" width="370" height="89"/>
+                                <rect key="frame" x="82" y="35" width="236.5" height="65"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="VfH-a8-iut">
-                                        <rect key="frame" x="0.0" y="7.5" width="108" height="74"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VfH-a8-iut">
+                                        <rect key="frame" x="0.0" y="7" width="108" height="51"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Santa Barbara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SlA-nx-3s5">
                                                 <rect key="frame" x="0.0" y="0.0" width="108" height="20.5"/>
@@ -48,15 +51,15 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dep. time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGm-o4-uup">
-                                                <rect key="frame" x="0.0" y="53.5" width="108" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="30.5" width="108" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-S9-DjH">
-                                        <rect key="frame" x="281.5" y="7.5" width="88.5" height="74"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bdb-S9-DjH">
+                                        <rect key="frame" x="148" y="7" width="88.5" height="51"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="China Town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4at-gj-S9b">
                                                 <rect key="frame" x="0.0" y="0.0" width="88.5" height="20.5"/>
@@ -65,7 +68,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Arr. time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHs-aR-W2t">
-                                                <rect key="frame" x="0.0" y="53.5" width="88.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="30.5" width="88.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -73,13 +76,34 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="gAM-uj-8Ve"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="uO6-R0-NOi">
+                                <rect key="frame" x="82" y="105" width="236.5" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Santa Barbara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YV-Py-N3y">
+                                        <rect key="frame" x="0.0" y="5" width="108" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.64629106329999997" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="China Town" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kha-RN-ENb">
+                                        <rect key="frame" x="148" y="5" width="88.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.60988531050000006" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xy5-hE-8Lu"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="roN-Ws-MJI" secondAttribute="trailing" constant="15" id="nrI-Gc-kLV"/>
-                            <constraint firstItem="SPx-tY-pQk" firstAttribute="leading" secondItem="fCR-iJ-6jg" secondAttribute="leading" constant="15" id="o9n-5J-6M8"/>
                             <constraint firstItem="roN-Ws-MJI" firstAttribute="leading" secondItem="fCR-iJ-6jg" secondAttribute="leading" constant="15" id="t0d-qx-BaK"/>
-                            <constraint firstAttribute="trailing" secondItem="SPx-tY-pQk" secondAttribute="trailing" constant="15" id="u3Z-Jx-FMQ"/>
                         </constraints>
                     </stackView>
                 </subviews>
@@ -95,8 +119,10 @@
                 <outlet property="arrivingTime" destination="hHs-aR-W2t" id="8xn-bW-LrO"/>
                 <outlet property="departureCity" destination="SlA-nx-3s5" id="kSe-Uf-lFe"/>
                 <outlet property="departureTime" destination="pGm-o4-uup" id="3Se-4h-rJS"/>
+                <outlet property="flightClass" destination="2YV-Py-N3y" id="W2y-fg-3iM"/>
+                <outlet property="passCount" destination="Kha-RN-ENb" id="UQt-gI-0Tm"/>
             </connections>
-            <point key="canvasLocation" x="1.4492753623188408" y="107.47767857142857"/>
+            <point key="canvasLocation" x="-14.492753623188406" y="-31.808035714285712"/>
         </tableViewCell>
     </objects>
 </document>
